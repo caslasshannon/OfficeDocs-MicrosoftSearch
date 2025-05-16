@@ -75,10 +75,15 @@ The following steps provide guidance on how to register the app:
    | View content details | `read:content-details:confluence` | Crawl content satisfying criteria.
    | View groups | `read:group:confluence` | To access group permissions of content.
    | View user details | `read:user:confluence` | To access individual user details to support permissions.
+   | View audit Records | `read:audit-log:confluence` | View and export audit records for Confluence events.   
+   | View pages | `read:page:confluence` | View page content.
+   | View spaces | `read:space:confluence` | View space details.
+   | View content summaries | `read:content.metadata:confluence` | View information about the content. Note that this does not provide access to the content itself.
+   | View content restrictions and space permissions | `read:permission:confluence` | View content restrictions and space permissions. Note that is only used for V2 APIs
 
-5. Click **Save**.
-6. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
-7. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
+6. Click **Save**.
+7. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
+8. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
 
    Complete the connection settings step using the **Client ID** and **Secret**.
 
@@ -86,7 +91,7 @@ The following steps provide guidance on how to register the app:
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about the limited rollout, click [here](./staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can click the "Create" button and the Confluence Cloud Microsoft Graph connector starts indexing page from your Confluence account.
+At this point, you are ready to create the connection for Confluence Knowledge. You can click the "Create" button and the Confluence Cloud Microsoft Graph connector starts indexing page from your Confluence account.
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency etc., We set defaults based on what works best with Confluence data. The default values are as follows:
 
